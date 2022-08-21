@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">android</string>
+
+    <string name="rendez_vous">Rendez-vous</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="connexion"><u><b>تسجيل الدخول </b></u></string>
+    <string name="inscrire"><u><b>تسجيل</b></u></string>
+    <string name="forgetPw"><u><b>نسيت كلمة المرور؟</b></u></string>
+    <string name="validation">أوافق على شروط الاستخدام العامة</string>
+    <string name="saisissez">أدخل رمز التحقق</string>
+    <string name="send">أرسلنا رمزك الى: </string>
+    <string name="recieved">لم يصلك الرمز؟</string>
+    <string name="deconnexion"><u><b>تسجيل الخروج</b></u></string>
+    <string name="edittext_hint"><font size="45"><b>الأخيرة</b></font></string>
+    <string name="bonjour">عسلامة</string>
+    <string name="exclamation_point">!</string>
+    <string name="mes_offres">عروضي</string>
+    <string name="bonjour_pt">عسلامة !</string>
+    <string name="je_suis_un">أنا..</string>
+    <string name="prestataire">موفر الخدمة</string>
+    <string name="client">زبون</string>
+    <string name="bon_plan">أفضل العروض</string>
+    <string name="r_servation">الحجز</string>
+    <string name="cat_gorie">المجالات</string>
+    <string name="gouvernorat">الولاية</string>
+    <string name="city">المدينة</string>
+    <string name="nos_cat_gories">مجلاتنا</string>
+    <string name="la_une">المستجدات</string>
+    <string name="mon_profile">حسابي</string>
+    <string name="pseudo">اسم االمستخدم</string>
+    <string name="mot_de_passe">كلمة السر</string>
+    <string name="confirmer_mot_de_passe">تأكيد كلمة المرور</string>
+    <string name="param_tres">الإعدادات</string>
+    <string name="langue">اللغة</string>
+    <string name="fran_ais">فرنسي</string>
+    <string name="arabe">عربي</string>
+    <string name="mon_compte">حسابي</string>
+    <string name="refresh_language">هل ترغب في تغيير لغتك</string>
+    <string name="oui">نعم فعلا</string>
+    <string name="non">لا</string>
+    <string name="medecine">الطب</string>
+    <string name="plomberie">السباكة</string>
+    <string name="mecanique">ميكانيكي</string>
+    <string name="high_tech">تقنية</string>
+    <string name="coiffure">حلاقة</string>
+    <string name="opticien">النظاراتي</string>
+    <string name="veuillez_saisir_votre_num_ro_de_t_l_phone">يرجى إدخال رقم الهاتف الخاص بك</string>
+    <string name="ajouter_une_offre">أضف عرضًا</string>
+    <string name="titre">العنوان</string>
+    <string name="sous_titre">العنوان الفرعي</string>
+    <string name="prix">السعر</string>
+    <string name="description">الوصف</string>
+    <string name="partager">مشاركة</string>
+    <string name="liste_des_rendez_vous">قائمة المواعيد</string>
+    <string name="tout">الكل</string>
+    <string name="home">الواجهة</string>
+    <string name="profile">الحساب</string>
+    <string name="offre">العرض</string>
+    <string name="dispo">الشغور</string>
+    <string name="rdv">المواعيد</string>
+    <string name="inscrivez_vous">اشتراك</string>
+    <string name="nom">الإسم</string>
+    <string name="pr_nom">اللقب</string>
+    <string name="num_ro_de_t_l_phone">رقم الهاتف</string>
+    <string name="ville">المدينة</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="s_inscrire">التسجيل</string>
+    <string name="renvoyer">أرسل مرة أخرى</string>
+    <string name="suivant">التالي</string>
+    <string name="bienvenu">أهلا بك!</string>
+    <string name="password_match">كلمات المرور متطابقة!</string>
+    <string name="password_dont_match">كلمات المرور غير متطابقة!</string>
+    <string name="notifications">إشعارات</string>
+    <string name="alerte">تحذير!</string>
+    <string name="timeslot">مـواعـيـد</string>
+    <string name="confirmer_la_r_servation">تأكيد الحجز</string>
+    <string name="veuillez_attendre_la_confirmation_du">يرجى انتظار التأكيد من</string>
+    <string name="confirmer">تأكيد</string>
+    <string name="r_servation_r_ussite">تم الحجز بنجاح</string>
+    <string name="update_success">تم التحديث بنجاح!!</string>
+    <string name="invalid_password">كلمة مرور غير مقبولة!!</string>
+    <string name="invalid_username">اسم المستخدم مسجل بالفعل!</string>
+    <string name="task_cancelled">تم إلغاء المهمة</string>
+    <string name="check_cnx">الرجاء التثبت من اتصالكم بالانترنت!!</string>
+    <string name="cancel">إلغاء</string>
+    <string name="proceed">أخذ موعد</string>
+    <string name="added_successfully">تمت إضافة العرض بنجاح</string>
+    <string name="fill_fields">الرجاء ملء جميع الفراغات</string>
+    <string name="missing_photo">الرجاء إضافة صورة</string>
+    <string name="reservation_confirmed">تمَ تأكيد الموعد</string>
+    <string name="reservation_rejected">تمَ رفض الموعد</string>
+    <string name="reservation_deleted">تمَ مسح الموعد نهائيا</string>
+    <string name="registred_success">تم التسجيل بنجاح</string>
+    <string name="check_username">تحقق من اسم المستخدم</string>
+    <string name="check_password">تحقق من كلمة المرور</string>
+    <string name="pwd_changed">تم التغيير بنجاح</string>
+    <string name="monday">الاثنين</string>
+    <string name="tuesday">الثلاثاء</string>
+    <string name="wednesday">الأربعاء</string>
+    <string name="thursday">الخميس</string>
+    <string name="friday">الجمعة</string>
+    <string name="saturday">السبت</string>
+    <string name="sunday">الأحَد</string>
+
+
+
+
+    <string-array name="Government">
+        <item>نابل</item>
+        <item>تونس</item>
+        <item>سوسه</item>
+        <item>صفاقس</item>
+        <item>القصرين</item>
+    </string-array>
+
+    <string-array name="cities">
+        <item>قربة</item>
+        <item>قليبية</item>
+        <item>فريانة</item>
+        <item>سبيطلة</item>
+        <item>أكودة</item>
+        <item>سهلول</item>
+        <item>ساقية الزيت</item>
+        <item>محرس</item>
+        <item>دندان</item>
+        <item>المروج</item>
+    </string-array>
+
+    <string-array name="nabeul_city">
+        <item>قربة</item>
+        <item>قليبية</item>
+    </string-array>
+
+    <string-array name="kasserine_city">
+        <item>فريانة</item>
+        <item>سبيطلة</item>
+    </string-array>
+
+    <string-array name="sousse_city">
+        <item>أكودة</item>
+        <item>سهلول</item>
+    </string-array>
+
+    <string-array name="sfax_city">
+        <item>ساقية الزيت</item>
+        <item>محرس</item>
+    </string-array>
+
+    <string-array name="tunis_city">
+        <item>دندان</item>
+        <item>المروج</item>
+    </string-array>
+
+    <string-array name="AppointmentFilter">
+        <item>الكل</item>
+        <item>في الانتظار</item>
+        <item>المعتمدة</item>
+        <item>المرفوضة</item>
+    </string-array>
+
+
+    <string-array name="Categories">
+        <item>الطب</item>
+        <item>السباكة</item>
+        <item>ميكانيكي</item>
+        <item>تقنية</item>
+        <item>حلاقة</item>
+        <item>النظاراتي</item>
+    </string-array>
+
+
+
+</resources>

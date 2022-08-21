@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.auth.OtpFragment">
+
+    <data>
+
+        <variable
+            name="OtpFragment"
+            type="com.example.android.ui.auth.OtpFragment" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blueBackground">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="-13dp"
+                android:layout_marginTop="-2dp"
+                app:layout_constraintStart_toStartOf="@+id/RdvTextClient"
+                app:layout_constraintTop_toTopOf="@+id/RdvTextClient"
+                app:srcCompat="@drawable/dot" />
+
+            <TextView
+                android:id="@+id/RdvTextClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/abdoullahashgarregular"
+                android:text="@string/rendez_vous"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="-35dp"
+                app:cardCornerRadius="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/RdvTextClient"
+                app:cardBackgroundColor="@color/background_grey">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:layout_marginBottom="35dp"
+                    tools:ignore="SpeakableTextPresentCheck">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/phone_ring"
+                            android:layout_width="60dp"
+                            android:layout_height="78dp"
+                            android:layout_marginStart="183dp"
+                            android:layout_marginTop="56dp"
+                            android:layout_marginEnd="183dp"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/phone_ring"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/txt1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="55sp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="55sp"
+                            android:fontFamily="@font/rubik_bold"
+                            android:gravity="center"
+                            android:text="@string/saisissez"
+                            android:textColor="@color/blueBackground"
+                            android:textSize="26sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/phone_ring" />
+
+                        <TextView
+                            android:id="@+id/txt2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20sp"
+                            android:fontFamily="@font/rubikregular"
+                            android:gravity="center"
+                            android:text="@string/send"
+                            android:textColor="@color/blueBackground"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+                        <TextView
+                            android:id="@+id/clientPhoneNumberTxt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="92dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="92dp"
+                            android:fontFamily="@font/rubikregular"
+                            android:gravity="center"
+                            android:textColor="@color/blueBackground"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="40dp"
+                            android:layoutDirection="ltr"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/clientPhoneNumberTxt">
+
+                            <EditText
+                                android:id="@+id/num1"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/otp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:imeOptions="actionNext"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textSize="18dp"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <EditText
+                                android:id="@+id/num2"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/otp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:imeOptions="actionNext"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textSize="18dp" />
+
+                            <EditText
+                                android:id="@+id/num3"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/otp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:imeOptions="actionNext"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textSize="18dp"/>
+
+                            <EditText
+                                android:id="@+id/num4"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/otp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:imeOptions="actionNext"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textSize="18dp" />
+
+                            <EditText
+                                android:id="@+id/num5"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/otp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:imeOptions="actionNext"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textSize="18dp"/>
+
+                            <EditText
+                                android:id="@+id/num6"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/otp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:imeOptions="actionNext"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textSize="18dp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txt4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="55sp"
+                            android:layout_marginTop="90dp"
+                            android:layout_marginEnd="55sp"
+                            android:fontFamily="@font/rubikregular"
+                            android:gravity="center"
+                            android:text="@string/recieved"
+                            android:textColor="@color/blueBackground"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/clientPhoneNumberTxt" />
+
+                        <TextView
+                            android:id="@+id/txt5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="55sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="55sp"
+                            android:fontFamily="@font/rubikregular"
+                            android:gravity="center"
+                            android:onClick='@{() -> OtpFragment.resendOTP()}'
+                            android:text="@string/renvoyer"
+                            android:textColor="@color/red"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt4" />
+
+                        <Button
+                            android:id="@+id/sendOtpCode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginEnd="40dp"
+                            android:layout_marginBottom="10dp"
+                            android:backgroundTint="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:onClick='@{() -> OtpFragment.checkOTP()}'
+                            android:text="@string/suivant"
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            app:cornerRadius="14dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt5" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </ScrollView>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

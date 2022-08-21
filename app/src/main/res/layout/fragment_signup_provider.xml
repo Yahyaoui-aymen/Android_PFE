@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.auth.SignupProviderFragment">
+
+    <data>
+
+        <variable
+            name="SignupProviderFragment"
+            type="com.example.android.ui.auth.SignupProviderFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blueBackground">
+
+            <ImageView
+                android:id="@+id/providerDotImg"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="-13dp"
+                android:layout_marginTop="-2dp"
+                android:contentDescription="TODO"
+                app:layout_constraintStart_toStartOf="@+id/RdvTextProvider"
+                app:layout_constraintTop_toTopOf="@+id/RdvTextProvider"
+                app:srcCompat="@drawable/dot" />
+
+            <TextView
+                android:id="@+id/RdvTextProvider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/abdoullahashgarregular"
+                android:text="Rendez-vous"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardProvider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="-35dp"
+                app:cardBackgroundColor="@color/background_grey"
+                app:cardCornerRadius="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/RdvTextProvider">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="35dp">
+
+                    <TextView
+                        android:id="@+id/signupProviderTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/rubik_bold"
+                        android:text="@string/inscrivez_vous"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- field for Name. -->
+                    <TextView
+                        android:id="@+id/providerNameLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/nom"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@id/signupProviderTxt" />
+
+                    <TextView
+                        android:id="@+id/providerNamestar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/providerNameLabel"
+                        app:layout_constraintStart_toEndOf="@+id/providerNameLabel"
+                        app:layout_constraintTop_toTopOf="@+id/providerNameLabel"
+                        tools:ignore="TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/providerNameEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/providerNameLabel"
+                        app:layout_constraintTop_toBottomOf="@id/providerNameLabel"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                    <!-- field for FirstName. -->
+                    <TextView
+                        android:id="@+id/providerFirstNameLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/pr_nom"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/providerNameEditText" />
+
+                    <TextView
+                        android:id="@+id/providerFirstNameStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        app:layout_constraintBottom_toBottomOf="@+id/providerFirstNameLabel"
+                        app:layout_constraintStart_toEndOf="@id/providerFirstNameLabel"
+                        app:layout_constraintTop_toTopOf="@+id/providerFirstNameLabel" />
+
+                    <EditText
+                        android:id="@+id/providerFirstNameEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/providerFirstNameLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/providerFirstNameLabel"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+                    <!-- field for Phone Number. -->
+                    <TextView
+                        android:id="@+id/providerPhoneNumberLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/num_ro_de_t_l_phone"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/providerFirstNameEditText" />
+
+                    <TextView
+                        android:id="@+id/providerPhoneNumberStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/providerPhoneNumberLabel"
+                        app:layout_constraintStart_toEndOf="@id/providerPhoneNumberLabel"
+                        app:layout_constraintTop_toTopOf="@+id/providerPhoneNumberLabel" />
+
+                    <EditText
+                        android:id="@+id/providerPhoneNumberEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        android:inputType="phone"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/providerPhoneNumberLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/providerPhoneNumberLabel"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    <!-- field for Government. -->
+                    <TextView
+                        android:id="@+id/providerGovernmentLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/gouvernorat"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/providerPhoneNumberEditText" />
+
+                    <TextView
+                        android:id="@+id/providerGovernmentStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/providerGovernmentLabel"
+                        app:layout_constraintStart_toEndOf="@id/providerGovernmentLabel"
+                        app:layout_constraintTop_toTopOf="@+id/providerGovernmentLabel" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/providerGovernmentSpinner"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconTint="@color/textBlueColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/providerGovernmentLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/providerGovernmentLabel">
+
+                        <AutoCompleteTextView
+
+                            android:id="@+id/providerGovernmentTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edittext_bg"
+                            android:inputType="none"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/white" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- field for City. -->
+                    <TextView
+                        android:id="@+id/providerCityLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/ville"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/providerGovernmentSpinner" />
+
+                    <TextView
+                        android:id="@+id/providerCityStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/providerCityLabel"
+                        app:layout_constraintStart_toEndOf="@id/providerCityLabel"
+                        app:layout_constraintTop_toTopOf="@+id/providerCityLabel" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/providerCitySpinner"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconTint="@color/textBlueColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/providerCityLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/providerCityLabel">
+
+                        <AutoCompleteTextView
+
+                            android:id="@+id/providerCityTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edittext_bg"
+                            android:inputType="none"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/white" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- field for Email. -->
+                    <TextView
+                        android:id="@+id/providerEmailLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/email"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/providerCitySpinner" />
+
+                    <TextView
+                        android:id="@+id/providerEmailStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/providerEmailLabel"
+                        app:layout_constraintStart_toEndOf="@id/providerEmailLabel"
+                        app:layout_constraintTop_toTopOf="@+id/providerEmailLabel" />
+
+                    <EditText
+                        android:id="@+id/providerEmailEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/providerEmailLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/providerEmailLabel"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    <!-- field for Pseudo. -->
+                    <TextView
+                        android:id="@+id/providerPseudoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/pseudo"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/providerEmailEditText" />
+
+                    <TextView
+                        android:id="@+id/providerPseudoStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/providerPseudoLabel"
+                        app:layout_constraintStart_toEndOf="@id/providerPseudoLabel"
+                        app:layout_constraintTop_toTopOf="@+id/providerPseudoLabel" />
+
+                    <EditText
+                        android:id="@+id/providerPseudoEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/providerPseudoLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/providerPseudoLabel"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    <!-- field for Password. -->
+                    <TextView
+                        android:id="@+id/providerPwdLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/mot_de_passe"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/providerPseudoEditText" />
+
+                    <TextView
+                        android:id="@+id/providerPwdStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/providerPwdLabel"
+                        app:layout_constraintStart_toEndOf="@id/providerPwdLabel"
+                        app:layout_constraintTop_toTopOf="@+id/providerPwdLabel" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/providerPwEye"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconTint="@color/textBlueColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/providerPwdLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/providerPwdLabel"
+                        app:passwordToggleEnabled="true"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_bg"
+                            android:inputType="textPassword"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/white" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- field for Confirm Password. -->
+                    <TextView
+                        android:id="@+id/providerPwdConfirmLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/confirmer_mot_de_passe"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/providerPwEye" />
+
+                    <TextView
+                        android:id="@+id/providerPwdConfirmStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/providerPwdConfirmLabel"
+                        app:layout_constraintStart_toEndOf="@id/providerPwdConfirmLabel"
+                        app:layout_constraintTop_toTopOf="@+id/providerPwdConfirmLabel" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/providerConfirmPwEye"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconTint="@color/textBlueColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/providerPwdConfirmLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/providerPwdConfirmLabel"
+                        app:passwordToggleEnabled="true"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                        <EditText
+                            android:id="@+id/confirmpasswordTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_bg"
+                            android:inputType="textPassword"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/error"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:textColor="#ff0000"
+                        app:layout_constraintStart_toStartOf="@id/providerConfirmPwEye"
+                        app:layout_constraintEnd_toEndOf="@+id/providerConfirmPwEye"
+                        app:layout_constraintTop_toBottomOf="@+id/providerConfirmPwEye"/>
+
+
+                    <!-- field for Category. -->
+                    <TextView
+                        android:id="@+id/providerCategoryLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/cat_gorie"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/error" />
+
+                    <TextView
+                        android:id="@+id/providerCategoryStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/providerCategoryLabel"
+                        app:layout_constraintStart_toEndOf="@id/providerCategoryLabel"
+                        app:layout_constraintTop_toTopOf="@+id/providerCategoryLabel" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/providerCategorySpinner"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconTint="@color/textBlueColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/providerCategoryLabel"
+                        app:layout_constraintTop_toBottomOf="@+id/providerCategoryLabel">
+
+
+                        <AutoCompleteTextView
+                            android:id="@+id/providerCategoryTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edittext_bg"
+                            android:inputType="none"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/white" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- Signup Button. -->
+                    <Button
+                        android:id="@+id/SignupProviderButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        android:backgroundTint="@color/aqua_500"
+                        android:fontFamily="@font/rubik_medium"
+                        android:onClick='@{() -> SignupProviderFragment.goToVerificationScreen() }'
+                        android:text="@string/s_inscrire"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        app:cornerRadius="14dp"
+                        app:layout_constraintEnd_toEndOf="@+id/providerCategorySpinner"
+                        app:layout_constraintStart_toStartOf="@id/signupProviderTxt"
+                        app:layout_constraintTop_toBottomOf="@id/providerCategorySpinner" />
+
+                    <TextView
+                        android:id="@+id/providerConnexionTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:onClick='@{() -> SignupProviderFragment.goToLoginScreen() }'
+                        android:text="@string/connexion"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/SignupProviderButton" />
+
+
+                    <RadioButton
+                        android:id="@+id/providerValidationBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/validation"
+                        android:textColor="@color/textBlueColor"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/providerConnexionTxt" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

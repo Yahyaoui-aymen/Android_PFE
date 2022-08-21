@@ -1,0 +1,183 @@
+<resources>
+    <string name="app_name">android</string>
+    <string name="rendez_vous">Rendez-vous</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="connexion"><u><b>Connexion</b></u></string>
+    <string name="inscrire"><u><b>S\'inscrire</b></u></string>
+    <string name="forgetPw"><u><b>Mot de passe oublié?</b></u></string>
+    <string name="validation">J\'accepte les conditions générales d\'utilisation</string>
+    <string name="saisissez">Saisissez le code de vérification</string>
+    <string name="send">Nous avons envoyé votre code à : </string>
+    <string name="recieved">Vous n\'avez pas reçu le code?</string>
+    <string name="deconnexion"><u><b>Déconnexion</b></u></string>
+    <string name="edittext_hint"><font size="45"><b>Récents</b></font></string>
+    <string name="bonjour">Bonjour</string>
+    <string name="exclamation_point">!</string>
+    <string name="mes_offres">Mes offres</string>
+    <string name="bonjour_pt">Bonjour !</string>
+    <string name="je_suis_un">Je suis un..</string>
+    <string name="prestataire">Prestataire</string>
+    <string name="client">Client</string>
+    <string name="bon_plan">Bon plan</string>
+    <string name="cat_gorie">Catégorie</string>
+    <string name="gouvernorat">Gouvernorat</string>
+    <string name="city">City</string>
+    <string name="nos_cat_gories">Nos catégories</string>
+    <string name="la_une">à la une</string>
+    <string name="mon_profile">Mon profile</string>
+    <string name="pseudo">Pseudo</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="confirmer_mot_de_passe">Confirmer mot de passe</string>
+    <string name="param_tres" translatable="false">Paramètres</string>
+    <string name="langue">Langue</string>
+    <string name="fran_ais">Français</string>
+    <string name="arabe">Arabe</string>
+    <string name="mon_compte">Mon compte</string>
+    <string name="refresh_language">Voulez vous changer votre langue</string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
+    <string name="medecine">Médecine </string>
+    <string name="plomberie">Plomberie </string>
+    <string name="mecanique">Mécanique </string>
+    <string name="high_tech">High Tech </string>
+    <string name="coiffure">Coiffure </string>
+    <string name="opticien">Opticien </string>
+    <string name="veuillez_saisir_votre_num_ro_de_t_l_phone">Veuillez saisir votre numéro de téléphone</string>
+    <string name="ajouter_une_offre">Ajouter une offre</string>
+    <string name="titre">Titre</string>
+    <string name="sous_titre">Sous titre</string>
+    <string name="prix">Prix</string>
+    <string name="description">Description</string>
+    <string name="partager">Partager</string>
+    <string name="liste_des_rendez_vous">Liste des rendez-vous</string>
+    <string name="tout">Tout</string>
+    <string name="home">Acceuil</string>
+    <string name="profile">Profil</string>
+    <string name="offre">Offre</string>
+    <string name="dispo">dispo</string>
+    <string name="rdv">RDV</string>
+    <string name="inscrivez_vous">Inscrivez-vous</string>
+    <string name="nom">Nom</string>
+    <string name="pr_nom">Prénom</string>
+    <string name="num_ro_de_t_l_phone">Numéro de téléphone</string>
+    <string name="ville">Ville</string>
+    <string name="email">Email</string>
+    <string name="s_inscrire">S\'inscrire</string>
+    <string name="renvoyer">RENVOYER</string>
+    <string name="suivant">Suivant</string>
+    <string name="bienvenu">Bienvenu!</string>
+    <string name="password_match">les mots de passe sont similaires!</string>
+    <string name="password_dont_match">les mots de passe sont différents!</string>
+    <string name="notifications">Notifications</string>
+    <string name="alerte">Alerte!</string>
+    <string name="reject_notif" translatable="false"> a rejeté votre demande de rendez-Vous</string>
+    <string name="accept_notif" translatable="false"> a accepté votre demande de rendez-Vous le</string>
+    <string name="eight" translatable="false">08:00 h</string>
+    <string name="nine" translatable="false">09:00 h</string>
+    <string name="ten" translatable="false">10:00 h</string>
+    <string name="eleven" translatable="false">11:00 h</string>
+    <string name="twelve" translatable="false">12:00 h</string>
+    <string name="thirteen" translatable="false">13:00 h</string>
+    <string name="fourteen" translatable="false">14:00 h</string>
+    <string name="fifteen" translatable="false">15:00 h</string>
+    <string name="sixteen" translatable="false">16:00 h</string>
+    <string name="seventeen" translatable="false">17:00 h</string>
+    <string name="eighteen" translatable="false">18:00 h</string>
+    <string name="nineteen" translatable="false">19:00 h</string>
+    <string name="timeslot">Créneaux</string>
+    <string name="confirmer_la_r_servation">Confirmer la réservation</string>
+    <string name="veuillez_attendre_la_confirmation_du">Veuillez attendre la confirmation du</string>
+    <string name="confirmer">Confirmer</string>
+    <string name="r_servation_r_ussite">Réservation réussite</string>
+    <string name="update_success">changement avec succes!!</string>
+    <string name="invalid_password">mot de passe invalide!!</string>
+    <string name="invalid_username">Nom d\'utilisateur déjà pris!</string>
+    <string name="task_cancelled">tâche annulée</string>
+    <string name="check_cnx">Vérifiez votre connexion!!</string>
+    <string name="cancel">Annuler</string>
+    <string name="proceed">Réserver</string>
+    <string name="r_servation">Réservation</string>
+    <string name="added_successfully">Offre ajoutée avec succès</string>
+    <string name="fill_fields">Veuillez remplir tous les champs</string>
+    <string name="missing_photo">Veuillez ajouter une photo</string>
+    <string name="reservation_confirmed">Réservation confirmée</string>
+    <string name="reservation_rejected">Réservation rejetée</string>
+    <string name="reservation_deleted">Réservation supprimée de votre liste</string>
+    <string name="registred_success">Enregistré avec succès</string>
+    <string name="check_username">Vérifier le nom d\'utilisateur</string>
+    <string name="check_password">Vérifier le mot de passe</string>
+    <string name="pwd_changed">Le changement effectué avec succès</string>
+    <string name="monday">Lundi</string>
+    <string name="tuesday">Mardi</string>
+    <string name="wednesday">Mercredi</string>
+    <string name="thursday">Jeudi</string>
+    <string name="friday">Vendredi</string>
+    <string name="saturday">Samedi</string>
+    <string name="sunday">Dimanche</string>
+
+
+    <string-array name="Government">
+        <item>Nabeul</item>
+        <item>Tunis</item>
+        <item>Sousse</item>
+        <item>Sfax</item>
+        <item>Kasserine</item>
+    </string-array>
+
+    <string-array name="cities">
+        <item>Korba</item>
+        <item>Kélibia</item>
+        <item>Feriana</item>
+        <item>Sbitla</item>
+        <item>Akouda</item>
+        <item>Sahloul</item>
+        <item>Sakiet ezzit</item>
+        <item>Mahres</item>
+        <item>Danden</item>
+        <item>Mourouj</item>
+    </string-array>
+
+    <string-array name="nabeul_city">
+        <item>Korba</item>
+        <item>Kélibia</item>
+    </string-array>
+
+    <string-array name="kasserine_city">
+        <item>Feriana</item>
+        <item>Sbitla</item>
+    </string-array>
+
+    <string-array name="sousse_city">
+        <item>Akouda</item>
+        <item>Sahloul</item>
+    </string-array>
+
+    <string-array name="sfax_city">
+        <item>Sakiet ezzit</item>
+        <item>Mahres</item>
+    </string-array>
+
+    <string-array name="tunis_city">
+        <item>Danden</item>
+        <item>Mourouj</item>
+    </string-array>
+
+    <string-array name="Categories">
+        <item>Medecine</item>
+        <item>Plomberie</item>
+        <item>Mecanique</item>
+        <item>High Tech</item>
+        <item>Coiffure</item>
+        <item>Opticien</item>
+    </string-array>
+
+    <string-array name="AppointmentFilter">
+        <item>Tout</item>
+        <item>Attente</item>
+        <item>Approuvé</item>
+        <item>Rejeté</item>
+    </string-array>
+
+</resources>

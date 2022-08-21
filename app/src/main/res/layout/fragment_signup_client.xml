@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.auth.SignupClientFragment">
+
+    <data>
+
+        <variable
+            name="clientViewModel"
+            type="com.example.android.models.AuthViewModel" />
+
+        <variable
+            name="signupClientFragment"
+            type="com.example.android.ui.auth.SignupClientFragment" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blueBackground">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="-13dp"
+                android:layout_marginTop="-2dp"
+                app:layout_constraintStart_toStartOf="@+id/RdvTextClient"
+                app:layout_constraintTop_toTopOf="@+id/RdvTextClient"
+                app:srcCompat="@drawable/dot" />
+
+            <TextView
+                android:id="@+id/RdvTextClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/abdoullahashgarregular"
+                android:text="@string/rendez_vous"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="-35dp"
+                app:cardBackgroundColor="@color/background_grey"
+                app:cardCornerRadius="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/RdvTextClient">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="35dp">
+
+                    <TextView
+                        android:id="@+id/signupClientTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/rubik_bold"
+                        android:text="@string/inscrivez_vous"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/clientNameLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/nom"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupClientTxt"
+                        app:layout_constraintTop_toBottomOf="@id/signupClientTxt" />
+
+                    <TextView
+                        android:id="@+id/startClient5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/clientNameLabel"
+                        app:layout_constraintStart_toEndOf="@+id/clientNameLabel"
+                        app:layout_constraintTop_toTopOf="@+id/clientNameLabel"
+                        tools:ignore="TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/nameClientEditTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/clientNameLabel"
+                        app:layout_constraintTop_toBottomOf="@id/clientNameLabel"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/clientPrenomLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/pr_nom"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupClientTxt"
+                        app:layout_constraintTop_toBottomOf="@id/nameClientEditTxt" />
+
+                    <TextView
+                        android:id="@+id/startClient6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/clientPrenomLabel"
+                        app:layout_constraintStart_toEndOf="@+id/clientPrenomLabel"
+                        app:layout_constraintTop_toTopOf="@+id/clientPrenomLabel"
+                        tools:ignore="TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/prenomClientEditTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/clientPrenomLabel"
+                        app:layout_constraintTop_toBottomOf="@id/clientPrenomLabel"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                    <TextView
+                        android:id="@+id/clientPhoneLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/num_ro_de_t_l_phone"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupClientTxt"
+                        app:layout_constraintTop_toBottomOf="@id/prenomClientEditTxt" />
+
+                    <TextView
+                        android:id="@+id/startClient7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/clientPhoneLabel"
+                        app:layout_constraintStart_toEndOf="@+id/clientPhoneLabel"
+                        app:layout_constraintTop_toTopOf="@+id/clientPhoneLabel"
+                        tools:ignore="TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/phoneClientEditTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        android:inputType="phone"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/clientPhoneLabel"
+                        app:layout_constraintTop_toBottomOf="@id/clientPhoneLabel"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                    <TextView
+                        android:id="@+id/clientEmailLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/email"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupClientTxt"
+                        app:layout_constraintTop_toBottomOf="@id/phoneClientEditTxt" />
+
+                    <TextView
+                        android:id="@+id/startClient8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/clientEmailLabel"
+                        app:layout_constraintStart_toEndOf="@+id/clientEmailLabel"
+                        app:layout_constraintTop_toTopOf="@+id/clientEmailLabel"
+                        tools:ignore="TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/emailClientEditTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/clientEmailLabel"
+                        app:layout_constraintTop_toBottomOf="@id/clientEmailLabel"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/clientPseudoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/pseudo"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupClientTxt"
+                        app:layout_constraintTop_toBottomOf="@id/emailClientEditTxt" />
+
+                    <TextView
+                        android:id="@+id/startClient9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/clientPseudoLabel"
+                        app:layout_constraintStart_toEndOf="@+id/clientPseudoLabel"
+                        app:layout_constraintTop_toTopOf="@+id/clientPseudoLabel"
+                        tools:ignore="TextContrastCheck" />
+
+                    <EditText
+                        android:id="@+id/pseudoClientEditTxt"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/clientPseudoLabel"
+                        app:layout_constraintTop_toBottomOf="@id/clientPseudoLabel"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+                    <TextView
+                        android:id="@+id/clientPwLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/mot_de_passe"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupClientTxt"
+                        app:layout_constraintTop_toBottomOf="@id/pseudoClientEditTxt" />
+
+                    <TextView
+                        android:id="@+id/startClient10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/clientPwLabel"
+                        app:layout_constraintStart_toEndOf="@+id/clientPwLabel"
+                        app:layout_constraintTop_toTopOf="@+id/clientPwLabel"
+                        tools:ignore="TextContrastCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/client1PwEye"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:passwordToggleEnabled="true"
+                        app:endIconTint="@color/textBlueColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/clientPwLabel"
+                        app:layout_constraintTop_toBottomOf="@id/clientPwLabel"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:background="@drawable/edittext_bg"
+                            android:textColorHint="@color/white"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/clientConfirmPwLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/confirmer_mot_de_passe"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/signupClientTxt"
+                        app:layout_constraintTop_toBottomOf="@id/client1PwEye" />
+
+                    <TextView
+                        android:id="@+id/startClient11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/clientConfirmPwLabel"
+                        app:layout_constraintStart_toEndOf="@+id/clientConfirmPwLabel"
+                        app:layout_constraintTop_toTopOf="@+id/clientConfirmPwLabel"
+                        tools:ignore="TextContrastCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/clientPwEye"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:passwordToggleEnabled="true"
+                        app:endIconTint="@color/textBlueColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/clientConfirmPwLabel"
+                        app:layout_constraintTop_toBottomOf="@id/clientConfirmPwLabel"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                        <EditText
+                            android:id="@+id/confirmpasswordTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:background="@drawable/edittext_bg"
+                            android:textColorHint="@color/white"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/error"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:textColor="#ff0000"
+                        app:layout_constraintStart_toStartOf="@id/clientPwEye"
+                        app:layout_constraintEnd_toEndOf="@+id/clientPwEye"
+                        app:layout_constraintTop_toBottomOf="@+id/clientPwEye"/>
+
+
+                    <Button
+                        android:id="@+id/signupClientButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="100dp"
+                        android:backgroundTint="@color/aqua_500"
+                        android:fontFamily="@font/rubikregular"
+                        android:onClick='@{() -> signupClientFragment.goToVerificationScreen()}'
+                        android:text="@string/s_inscrire"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        app:cornerRadius="14dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/signupClientTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/error" />
+
+                    <TextView
+                        android:id="@+id/connexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:onClick='@{() -> signupClientFragment.goToLoginScreen() }'
+                        android:text="@string/connexion"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/signupClientButton"
+                        tools:ignore="MissingConstraints,TextContrastCheck" />
+
+                    <RadioButton
+                        android:id="@+id/providerValidationBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/validation"
+                        android:textColor="@color/textBlueColor"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/connexion" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

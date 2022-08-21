@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.auth.BonjourFragment">
+
+    <data>
+
+        <variable
+            name="BonjourFragment"
+            type="com.example.android.ui.auth.BonjourFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/bonjour_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="240dp"
+            android:fontFamily="@font/rubik_bold"
+            android:text="@string/bonjour_pt"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/JeSuisText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="@string/je_suis_un"
+            android:textSize="19dp"
+            app:layout_constraintStart_toStartOf="@+id/bonjour_text"
+            app:layout_constraintTop_toBottomOf="@+id/bonjour_text" />
+
+        <Button
+            android:id="@+id/providerButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/rubikregular"
+            android:onClick='@{() -> BonjourFragment.goSignUp("provider")}'
+            android:text="@string/prestataire"
+            android:textAllCaps="false"
+            app:cornerRadius="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/JeSuisText"
+            app:layout_constraintTop_toBottomOf="@+id/JeSuisText" />
+
+        <Button
+            android:id="@+id/clientButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/aqua_500"
+            android:fontFamily="@font/rubik_bold"
+            android:onClick='@{() -> BonjourFragment.goSignUp("client")}'
+            android:text="@string/client"
+            android:textAllCaps="false"
+            app:cornerRadius="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/JeSuisText"
+            app:layout_constraintTop_toBottomOf="@+id/providerButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

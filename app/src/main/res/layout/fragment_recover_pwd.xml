@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.auth.RecoverPwdFragment">
+
+    <data>
+
+        <variable
+            name="RecoverPwdFragment"
+            type="com.example.android.ui.auth.RecoverPwdFragment" />
+
+    </data>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blueBackground">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="-13dp"
+                android:layout_marginTop="-2dp"
+                app:layout_constraintStart_toStartOf="@+id/RdvTextClient"
+                app:layout_constraintTop_toTopOf="@+id/RdvTextClient"
+                app:srcCompat="@drawable/dot"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:id="@+id/RdvTextClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/abdoullahashgarregular"
+                android:text="@string/rendez_vous"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="-35dp"
+                app:cardCornerRadius="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/RdvTextClient"
+                app:cardBackgroundColor="@color/background_grey">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    tools:ignore="SpeakableTextPresentCheck">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="35dp">
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginEnd="35dp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="Veuillez entrer votre nouveau mdp"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/userPwdLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="mot de passe"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubikregular"
+                        app:layout_constraintStart_toStartOf="@+id/txt"
+                        app:layout_constraintTop_toBottomOf="@id/txt" />
+
+                    <TextView
+                        android:id="@+id/start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubikregular"
+                        android:textColor="@color/red"
+                        app:layout_constraintBottom_toBottomOf="@+id/userPwdLabel"
+                        app:layout_constraintStart_toEndOf="@+id/userPwdLabel"
+                        app:layout_constraintTop_toTopOf="@+id/userPwdLabel"
+                        tools:ignore="TextContrastCheck" />
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/client1PwEye"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:passwordToggleEnabled="true"
+                        app:endIconTint="@color/textBlueColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/userPwdLabel"
+                        app:layout_constraintTop_toBottomOf="@id/userPwdLabel"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:background="@drawable/edittext_bg"
+                            android:textColorHint="@color/white"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/userPwdConfirmLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="Confirmer mot de passe"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubikregular"
+                        app:layout_constraintStart_toStartOf="@+id/txt"
+                        app:layout_constraintTop_toBottomOf="@id/client1PwEye" />
+
+                    <TextView
+                        android:id="@+id/start1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="*"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubikregular"
+                        android:textColor="@color/red"
+                        app:layout_constraintBottom_toBottomOf="@+id/userPwdConfirmLabel"
+                        app:layout_constraintStart_toEndOf="@+id/userPwdConfirmLabel"
+                        app:layout_constraintTop_toTopOf="@+id/userPwdConfirmLabel"
+                        tools:ignore="TextContrastCheck" />
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/client2PwEye"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/edittext_bg"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:passwordToggleEnabled="true"
+                        app:endIconTint="@color/textBlueColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/userPwdConfirmLabel"
+                        app:layout_constraintTop_toBottomOf="@id/userPwdConfirmLabel"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                        <EditText
+                            android:id="@+id/pwUserEditTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:background="@drawable/edittext_bg"
+                            android:textColorHint="@color/white"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:id="@+id/error"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:textColor="#ff0000"
+                        app:layout_constraintStart_toStartOf="@id/client2PwEye"
+                        app:layout_constraintEnd_toEndOf="@+id/client2PwEye"
+                        app:layout_constraintTop_toBottomOf="@+id/client2PwEye"/>
+
+
+                    <Button
+                        android:id="@+id/connexionUserButton"
+                        android:onClick='@{() -> RecoverPwdFragment.updatePwd()}'
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginEnd="40dp"
+                        android:backgroundTint="@color/aqua_500"
+                        android:text="Suivant"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubikregular"
+                        android:textAllCaps="false"
+                        app:cornerRadius="14dp"
+                        android:layout_marginBottom="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/txt"
+                        app:layout_constraintTop_toBottomOf="@+id/error"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                </ScrollView>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

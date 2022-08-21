@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/bonjourFragment">
+
+    <fragment
+        android:id="@+id/bonjourFragment"
+        android:name="com.example.android.ui.auth.BonjourFragment"
+        android:label="fragment_bonjour"
+        tools:layout="@layout/fragment_bonjour" >
+        <action
+            android:id="@+id/action_bonjourFragment_to_signupClientFragment"
+            app:destination="@id/signupClientFragment" />
+        <action
+            android:id="@+id/action_bonjourFragment_to_signupProviderFragment"
+            app:destination="@id/signupProviderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.android.ui.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_bonjourFragment"
+            app:destination="@id/bonjourFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPwFragment"
+            app:destination="@id/forgetPwFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupClientFragment"
+        android:name="com.example.android.ui.auth.SignupClientFragment"
+        android:label="fragment_signup_client"
+        tools:layout="@layout/fragment_signup_client" >
+        <action
+            android:id="@+id/action_signupClientFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signupClientFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupProviderFragment"
+        android:name="com.example.android.ui.auth.SignupProviderFragment"
+        android:label="fragment_signup_provider"
+        tools:layout="@layout/fragment_signup_provider" >
+        <action
+            android:id="@+id/action_signupProviderFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signupProviderFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.example.android.ui.auth.OtpFragment"
+        android:label="fragment_otp"
+        tools:layout="@layout/fragment_otp" >
+        <action
+            android:id="@+id/action_otpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_otpFragment_to_recoverPwdFragment"
+            app:destination="@id/recoverPwdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPwFragment"
+        android:name="com.example.android.ui.auth.ForgetPwFragment"
+        android:label="fragment_forget_pw"
+        tools:layout="@layout/fragment_forget_pw" >
+        <action
+            android:id="@+id/action_forgetPwFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recoverPwdFragment"
+        android:name="com.example.android.ui.auth.RecoverPwdFragment"
+        android:label="fragment_recover_pwd"
+        tools:layout="@layout/fragment_recover_pwd" >
+        <action
+            android:id="@+id/action_recoverPwdFragment_to_bonjourFragment"
+            app:destination="@id/bonjourFragment" />
+    </fragment>
+</navigation>

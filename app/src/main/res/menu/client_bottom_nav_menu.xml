@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_nav"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/category"
+        android:icon="@drawable/category_nav_non_active"
+        android:title="@string/cat_gorie" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_nav_non_active"
+        android:title="@string/profile" />
+
+    <item
+        android:id="@+id/best_plan"
+        android:icon="@drawable/bonplan_nav_non_active"
+        android:title="@string/bon_plan" />
+</menu>
